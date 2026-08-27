@@ -100,7 +100,7 @@ const codes = {
 
   "2526_s2_klsd10": "coming",
   "2526_s2_klsmp29": "2526_s2_smp",
-  "2627_s2_tnpga10": "2627_s2_pamong",
+  "2627_s1_tnpga10": "2627_s1_pamong",
   "2526_s2_kltdu47": "2526_s2_tdu",
 };
 
