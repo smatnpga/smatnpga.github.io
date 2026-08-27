@@ -83,7 +83,7 @@ const permission = {
 };
 
 const codes = {
-  "2627_s1_tnpga10": "2627_s1_sma",
+  "2627_s1_tnpga10": "2627_s1_pamong",
   "2526_s1_tnpga29": "coming",
 };
 
