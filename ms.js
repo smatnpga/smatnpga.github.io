@@ -83,7 +83,25 @@ const permission = {
 };
 
 const codes = {
-  "2627_s1_tnpga10": "2627_s1_pamong",
+  "2425_s1_klsd10": "2425_s1_sd",
+  "2425_s1_klsmp29": "2425_s1_smp",
+  "2425_s1_klsma38": "2425_s1_sma",
+  "2425_s1_kltdu47": "2425_s1_tdu",
+
+  "2425_s2_klsd10": "2425_s2_sd",
+  "2425_s2_klsmp29": "2425_s2_smp",
+  "2425_s2_klsma38": "2425_s2_sma",
+  "2425_s2_kltdu47": "2425_s2_tdu",
+
+  "2526_s1_klsd10": "2526_s1_sd",
+  "2526_s1_klsmp29": "2526_s1_smp",
+  "2526_s1_klsma38": "2526_s1_sma",
+  "2526_s1_kltdu47": "2526_s1_tdu",
+
+  "2526_s2_klsd10": "coming",
+  "2526_s2_klsmp29": "2526_s2_smp",
+  "2526_s2_klsma38": "2526_s2_sma",
+  "2526_s2_kltdu47": "2526_s2_tdu",
 };
 
 const cod = {
