@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>SMA Taruna Nusantara Kampus Pagar Alam</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+      /* =============================
+         LAYOUT UTAMA
+      ============================= */
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f3f4f6;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1500px;
+        padding: 20px;
+        box-sizing: border-box;
+        overflow-y: auto;
+        margin-top: 100px;
+      }
+
+      .box {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        flex: 1;
+        margin: 0 10px;
+        box-sizing: border-box;
+        min-width: 250px;
+      }
+
+      .box h1 {
+        margin-bottom: 20px;
+        color: #333;
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      .button-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        max-height: 345px;
+        overflow-y: auto;
+      }
+
+      .button {
+        padding: 10px 15px;
+        font-size: 14px;
+        color: #ffffff;
+        background-color: #007bff;
+        text-decoration: none;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition:
+          background-color 0.3s,
+          transform 0.2s,
+          box-shadow 0.2s;
+        text-align: center;
+        display: block;
+      }
+
+      .button:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      /* =============================
+         DATE & TIME
+      ============================= */
+
+      .datetime {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 90px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        box-sizing: border-box;
+        z-index: 1000;
+      }
+
+      .datetime .date {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .time-container {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .time-box {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f1f1f1;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .separator {
+        font-size: 18px;
+        color: #333;
+      }
+
+      /* =============================
+         TOMBOL LOGOUT
+      ============================= */
+
+      .logout-button {
+        width: 30px;
+        height: 80px;
+        font-size: 14px;
+        color: #ffffff;
+        border: none;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        cursor: pointer;
+        transition:
+          background-color 0.3s,
+          transform 0.2s;
+        position: fixed;
+        top: 5px;
+        right: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        background-color: #dc3545;
+      }
+
+      .logout-button:hover {
+        background-color: #c82333;
+        transform: translateY(-2px);
+      }
+
+      /* =============================
+         TOMBOL DOWNLOAD
+      ============================= */
+
+      .download-button {
+        width: 30px;
+        height: 80px;
+        font-size: 14px;
+        color: #ffffff;
+        border: none;
+        cursor: pointer;
+        transition:
+          background-color 0.3s,
+          transform 0.2s;
+        position: fixed;
+        top: 5px;
+        right: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        background-color: #28a745;
+      }
+
+      .download-button:hover {
+        background-color: #218838;
+        transform: translateY(-2px);
+      }
+
+      /* =============================
+         TOMBOL DOWNLOAD 2
+      ============================= */
+
+      .download-button-2 {
+        width: 30px;
+        height: 80px;
+        font-size: 14px;
+        color: #ffffff;
+        border: none;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        cursor: pointer;
+        transition:
+          background-color 0.3s,
+          transform 0.2s;
+        position: fixed;
+        top: 5px;
+        right: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        background-color: #007bff;
+      }
+
+      .download-button-2:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+      }
+
+      /* =============================
+         SEARCH
+      ============================= */
+
+      .search-container {
+        margin-bottom: 10px;
+      }
+
+      .search-input {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      /* =============================
+         RESPONSIVE
+      ============================= */
+
+      @media (max-width: 768px) {
+        .logout-button {
+          width: 30px;
+          height: 100px;
+          font-size: 14px;
+          top: 5px;
+          right: 8px;
+        }
+
+        .download-button {
+          width: 30px;
+          height: 100px;
+          font-size: 14px;
+          top: 5px;
+          right: 40px;
+        }
+
+        .download-button-2 {
+          width: 30px;
+          height: 100px;
+          font-size: 14px;
+          top: 5px;
+          right: 72px;
+        }
+
+        .box {
+          width: 100%;
+          max-width: none;
+          margin: 10px 0;
+        }
+
+        .datetime {
+          height: auto;
+          padding: 20px;
+        }
+      }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-QE54JKZXNQ"
+    ></script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag("js", new Date());
+
+      gtag("config", "G-CH0B6LDCJT");
+    </script>
+  </head>
+
+  <body>
+    <!-- =============================
+         IZIN RAPOR
+    ============================= -->
+
+    <script>
+      localStorage.setItem("izinRapor", "ya");
+    </script>
+
+    <!-- =============================
+         ACCESS PERMISSION
+    ============================= -->
+
+    <script>
+      const accessPermissions = {
+        "/2627_s1_pamong.html": "2627_s1_pamong",
+        "/2627_s1_admin.html": "2627_s1_admin",
+        "/coming.html": "coming",
+      };
+
+      const currentPage = window.location.pathname;
+      const accessGranted = sessionStorage.getItem("accessGranted");
+
+      if (accessGranted !== accessPermissions[currentPage]) {
+        window.location.href = "/";
+      }
+    </script>
+
+    <!-- =============================
+         DATE & TIME
+    ============================= -->
+
+    <div class="datetime" id="datetime">
+      <div class="date" id="date"></div>
+
+      <div class="time-container">
+        <div id="hour" class="time-box"></div>
+
+        <span class="separator">:</span>
+
+        <div id="minute" class="time-box"></div>
+
+        <span class="separator">:</span>
+
+        <div id="second" class="time-box"></div>
+
+        <!-- Logout -->
+        <button class="logout-button" onclick="logout()">
+          <i class="fas fa-sign-out-alt"></i>
+        </button>
+
+        <!-- Download Panduan -->
+        <button
+          class="download-button"
+          onclick="downloadDocument()"
+          title="Panduan Gsheet Penilaian 2425"
+        >
+          <i class="fas fa-download"></i>
+        </button>
+
+        <!-- Download TDU -->
+        <button
+          class="download-button-2"
+          onclick="downloadDocument2()"
+          title="Excel TDU"
+        >
+          <i class="fas fa-download"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- =============================
+         CONTAINER
+    ============================= -->
+
+    <div class="container">
+
+      <!-- =============================
+           GSHEET PENILAIAN
+      ============================= -->
+
+      <div class="box">
+        <h1>GSheet Penilaian</h1>
+
+        <div class="search-container">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search..."
+            oninput="filterButtons('penilaian', this.value)"
+          />
+        </div>
+
+        <div class="button-container" id="penilaian">
+
+          <a href="https://docs.google.com/spreadsheets/d/1W3IUJ9rrYaHl56kIewBQZ6GEKPktWPTuMhMu5zb180Q/edit?usp=sharing" class="button" target="_blank">AGAMA KATOLIK_11A_SMA</a>
+
+        </div>
+      </div>
+
+      <!-- =============================
+           ABSENSI
+      ============================= -->
+
+      <div class="box">
+        <h1>Absensi</h1>
+
+        <div class="search-container">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search..."
+            oninput="filterButtons('absensi', this.value)"
+          />
+        </div>
+
+        <div class="button-container" id="absensi">
+
+          <a href="https://docs.google.com/spreadsheets/d/1fUdo1AiSLUckylk4eoT8lXgiHO240p7h1hvgSy3FL50/edit?usp=sharing" class="button" target="_blank">11A_SMA</a>
+
+        </div>
+      </div>
+
+      <!-- =============================
+           LEDGER
+      ============================= -->
+
+      <div class="box">
+        <h1>Ledger</h1>
+
+        <div class="search-container">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search..."
+            oninput="filterButtons('ledger', this.value)"
+          />
+        </div>
+
+        <div class="button-container" id="ledger">
+
+          <a href="2526_s2_mlsma.html" class="button" target="_blank">ML_Predik_SMA</a>
+
+        </div>
+      </div>
+
+      <!-- =============================
+           DATA MASTER
+      ============================= -->
+
+      <div class="box">
+        <h1>Data Master</h1>
+
+        <div class="search-container">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search..."
+            oninput="filterButtons('dataMaster', this.value)"
+          />
+        </div>
+
+        <div class="button-container" id="dataMaster">
+
+          <a href="https://docs.google.com/spreadsheets/d/1OE9990Gzt84fEAf1p9HhK3jvVKAXd_gKvJMW3thZ1Ps/edit?usp=sharing" class="button" target="_blank">MASTER_SMA</a>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- =============================
+         JAVASCRIPT
+    ============================= -->
+
+    <script>
+      /* =============================
+         UPDATE DATE & TIME
+      ============================= */
+
+      function updateDateTime() {
+        const now = new Date();
+
+        const days = [
+          "Minggu",
+          "Senin",
+          "Selasa",
+          "Rabu",
+          "Kamis",
+          "Jumat",
+          "Sabtu",
+        ];
+
+        const months = [
+          "Januari",
+          "Februari",
+          "Maret",
+          "April",
+          "Mei",
+          "Juni",
+          "Juli",
+          "Agustus",
+          "September",
+          "Oktober",
+          "November",
+          "Desember",
+        ];
+
+        const dayName = days[now.getDay()];
+        const monthName = months[now.getMonth()];
+        const day = now.getDate();
+        const year = now.getFullYear();
+
+        const hour = String(now.getHours()).padStart(2, "0");
+        const minute = String(now.getMinutes()).padStart(2, "0");
+        const second = String(now.getSeconds()).padStart(2, "0");
+
+        document.getElementById("date").textContent =
+          `${dayName}, ${day} ${monthName} ${year}`;
+
+        document.getElementById("hour").textContent = hour;
+        document.getElementById("minute").textContent = minute;
+        document.getElementById("second").textContent = second;
+      }
+
+      /* =============================
+         LOGOUT
+      ============================= */
+
+      function logout() {
+        sessionStorage.removeItem("accessGranted");
+        window.location.href = "/";
+      }
+
+      /* =============================
+         SEARCH / FILTER
+      ============================= */
+
+      function filterButtons(containerId, searchTerm) {
+        const container = document.getElementById(containerId);
+        const buttons = container.getElementsByClassName("button");
+
+        for (let button of buttons) {
+          if (
+            button.textContent
+              .toLowerCase()
+              .includes(searchTerm.toLowerCase())
+          ) {
+            button.style.display = "block";
+          } else {
+            button.style.display = "none";
+          }
+        }
+      }
+
+      /* =============================
+         DISABLE RIGHT CLICK
+      ============================= */
+
+      document.addEventListener("contextmenu", function (event) {
+        event.preventDefault();
+      });
+
+      /* =============================
+         DISABLE CTRL + U
+      ============================= */
+
+      document.addEventListener("keydown", function (event) {
+        if (event.ctrlKey && event.key.toLowerCase() === "u") {
+          event.preventDefault();
+        }
+      });
+
+      /* =============================
+         DISABLE DEVTOOLS
+      ============================= */
+
+      document.addEventListener("keydown", function (event) {
+        if (
+          event.ctrlKey &&
+          event.shiftKey &&
+          event.key.toLowerCase() === "i"
+        ) {
+          event.preventDefault();
+        }
+
+        if (
+          event.ctrlKey &&
+          event.shiftKey &&
+          event.key.toLowerCase() === "j"
+        ) {
+          event.preventDefault();
+        }
+
+        if (event.key === "F12") {
+          event.preventDefault();
+        }
+      });
+
+      /* =============================
+         DISABLE CTRL + S
+      ============================= */
+
+      document.addEventListener("keydown", function (event) {
+        if (event.ctrlKey && event.key.toLowerCase() === "s") {
+          event.preventDefault();
+        }
+      });
+
+      /* =============================
+         DOWNLOAD PDF
+      ============================= */
+
+      function downloadDocument() {
+        const link = document.createElement("a");
+
+        link.href = "GSHEET PENILAIAN 2425.pdf";
+        link.download = "GSHEET PENILAIAN 2425.pdf";
+
+        document.body.appendChild(link);
+
+        link.click();
+
+        document.body.removeChild(link);
+      }
+
+      /* =============================
+         DOWNLOAD EXCEL
+      ============================= */
+
+      function downloadDocument2() {
+        const link = document.createElement("a");
+
+        link.href = "TDU_SMA_2526_S2.xlsx";
+        link.download = "TDU_SMA_2526_S2.xlsx";
+
+        document.body.appendChild(link);
+
+        link.click();
+
+        document.body.removeChild(link);
+      }
+
+      /* =============================
+         START CLOCK
+      ============================= */
+
+      updateDateTime();
+
+      setInterval(updateDateTime, 1000);
+    </script>
+  </body>
+</html>
